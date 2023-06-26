@@ -1,4 +1,5 @@
 // Import the tesseract.js library, which allows to recognize text from images
+
 const teser =require('tesseract.js');
 // Call the recognize method, which takes three arguments: the path to the image, the language of the text and an object with settings
 teser.recognize('./ai_cbr_2-min.png','rus',{
