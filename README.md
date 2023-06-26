@@ -1,14 +1,20 @@
 // Import the tesseract.js library, which allows to recognize text from images
+
 const teser =require('tesseract.js');
 
 // Call the recognize method, which takes three arguments: the path to the image, the language of the text and an object with settings
+
 teser.recognize('./ai_cbr_2-min.png','rus',{
+
     // In the settings, specify a function logger, which will be called at each stage of recognition and receive an object with information about the progress
     logger: e=>{
+    
         // Log the object with information about the progress to the console
+        
         console.log(e)
     }
 })
+
     // After the recognition is completed, the recognize method will return a promise, which we handle with the then method
     .then(out=>{
         // Get the recognition result as an object out, which has a property data with data about the text
