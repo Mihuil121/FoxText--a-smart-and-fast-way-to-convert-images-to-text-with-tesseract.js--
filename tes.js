@@ -1,0 +1,11 @@
+const teser =require('tesseract.js');
+
+teser.recognize('./ai_cbr_2-min.png','rus',{
+    logger: e=>{
+        console.log(e)
+    }
+})
+    .then(out=>{
+        let text = out.data.text.replace(/\n/g, ' ').replace(/[^a-zA-Zа-яА-Я0-9 ]/g, '');
+        console.log('вот что я прочитал :',text);
+    })
